@@ -11,7 +11,6 @@ const MONGO_URL =
 
 if (!MONGO_URL) {
   console.error("MONGO URL API KEY NOT WORKING");
-  Deno.exit(1);
 }
 
 const dbuser = new MongoClient(MONGO_URL);
