@@ -11,7 +11,7 @@ const MONGO_URL =
 
 if (!MONGO_URL) {
   console.error("MONGO URL API KEY NOT WORKING");
-  Deno.exit(1);
+  throw new Error("Se produjo un error crítico.");
 }
 
 const dbuser = new MongoClient(MONGO_URL);
