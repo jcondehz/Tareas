@@ -10,7 +10,8 @@ const MONGO_URL =
    Deno.env.get("MONGO_URL") ;
 
 if (!MONGO_URL) {
-  Deno.exit(0)
+  console.error("MONGO URL API KEY NOT WORKING");
+  Deno.exit(1);
 }
 
 const dbuser = new MongoClient(MONGO_URL);
